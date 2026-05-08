@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список книг</title>
+</head>
+<body>
+    <h1>Все книги</h1>
+    
+    {% for book in books %}
+        <div>
+            <strong>{{ book.title }}</strong><br>
+            Автор: <a href="/author/{{ book.author.id }}/">{{ book.author.name }}</a>
+            <hr>
+        </div>
+    {% endfor %}
+</body>
+</html>

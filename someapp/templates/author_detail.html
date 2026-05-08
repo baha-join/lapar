@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Книги автора {{ author.name }}</title>
+</head>
+<body>
+    <h1>Автор: {{ author.name }}</h1>
+    <h2>Книги этого автора:</h2>
+    
+    <ul>
+    {% for book in books %}
+        <li>{{ book.title }}</li>
+    {% endfor %}
+    </ul>
+    
+    <br>
+    <a href="/">← Назад к списку книг</a>
+</body>
+</html>
